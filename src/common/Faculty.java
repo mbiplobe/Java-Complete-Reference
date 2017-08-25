@@ -1,35 +1,34 @@
 package common;
 
-public abstract class Faculty extends Person {
-	private String designation;
-	private String employeeId;
+public class Faculty extends Employee {
+
 	
-	public Faculty() {
-		super();
-		this.designation = designation;
-		this.employeeId = employeeId;
-	}
 	
-	public Faculty(String designation, String employeeId) {
-		super();
-		this.designation = designation;
-		this.employeeId = employeeId;
+	@Override
+	public void setEmployeeInployeeInformation(String name,String address, String dateOfBirth, String designation, String getEmployeeId) {
+		setName(name);
+		setAddress(address);
+		setDesignation(designation);
+		setEmployeeId(getEmployeeId);
+		setDateOfBirth(dateOfBirth);
+
 	}
+
+	@Override
+	public String getEmployeeInployeeInformation() {
 	
-	public String getDesignation() {
-		return designation;
-	}
-	public void setDesignation(String designation) {
-		this.designation = designation;
+		String details= "Name : "+getName()
+		+"Address : "+getAddress()
+		+" Date of Birth : "+getDateOfBirth()
+		+"Designation : "+getDesignation()
+		+"Employee Id : "+getEmployeeId();
+	
+		return details;
 	}
 
 	
-	public String getEmployeeId() {
-		return employeeId;
-	}
-	public void setEmployeeId(String employeeId) {
-		this.employeeId = employeeId;
-	}
+
+	
 	
 
 }
